@@ -31,10 +31,10 @@
 
 // teste
 
-#define Quant_Compromissos 100
+#define Quant_Compromissos 50
 
 typedef struct {
-    char nome[100];
+    char nome[50];
     char data[20];
     char hora[10];
     int prioridade;
@@ -45,14 +45,15 @@ typedef struct {
     int quantidade;
 } Agenda;
 
-void cadastrar_compromisso(Agenda *agenda);
-void listar_compromissos(Agenda *agenda);
-void listar_por_prioridade(Agenda *agenda);
-void listar_por_data(Agenda *agenda);
-void listar_por_hora(Agenda *agenda);
-void listar_por_nome(Agenda *agenda);
-void editar_compromisso(Agenda *agenda);
-void menu_principal(Agenda *agenda);
+void cadastrar_compromisso();
+
+void listar_compromissos();
+void listar_por_prioridad();
+void listar_por_data();
+void listar_por_hora();
+void listar_por_nome();
+void editar_compromisso();
+void menu_principal();
 
 int main() {
     Agenda agenda;
@@ -84,37 +85,37 @@ void cadastrar_compromisso(Agenda *agenda) {
 void listar_compromissos(Agenda *agenda) {
     printf("Lista de compromissos:\n");
     for (int i = 0; i < agenda->quantidade; i++) {
-        printf("Nome: %s, Data: %s, Hora: %s, Prioridade: %d\n",
-               agenda->compromissos[i].nome,
-               agenda->compromissos[i].data,
-               agenda->compromissos[i].hora,
-               agenda->compromissos[i].prioridade);
+        printf("Nome: %s, Data: %s, Hora: %s, Prioridade: %d\n");
+               agenda->compromissos[i].nome;
+               agenda->compromissos[i].data;
+               agenda->compromissos[i].hora;
+               agenda->compromissos[i].prioridade;
     }
 }
 
 void listar_por_prioridade(Agenda *agenda) {
     printf("Lista de compromissos por prioridade:\n");
-    for (int i = 0; i < agenda->quantidade; i++) 
+    for (int i = 0; i < agenda->quantidade; i++);
 }
 void listar_por_data(Agenda *agenda) {
     printf("Lista de compromissos por data:\n");
-    for (int i = 0; i < agenda->quantidade; i++)
+    for (int i = 0; i < agenda->quantidade; i++);
 }
 void listar_por_hora(Agenda *agenda) {
     printf("Lista de compromissos por hora:\n");
-    for (int i = 0; i < agenda->quantidade; i++)    
+    for (int i = 0; i < agenda->quantidade; i++);   
 }
 
 void listar_por_nome(Agenda *agenda) {
     printf("Lista de compromissos por nome:\n"); 
-    for (int i = 0; i < agenda->quantidade; i++)     
+    for (int i = 0; i < agenda->quantidade; i++);    
 }
 
 void editar_compromisso(Agenda *agenda) {
-    char nome[100];
+    char nome[50];
     printf("Digite o nome do compromisso a ser editado: ");
     scanf(" %[^\n]", nome);
-    for (int i = 0; i < agenda->quantidade;)  
+    for (int i = 0; i < agenda->quantidade;i++);  
 }
 
 void menu_principal(Agenda *agenda) {
@@ -145,3 +146,4 @@ void menu_principal(Agenda *agenda) {
                 printf("Opção inválida. Por favor, escolha uma opção válida.\n");
         }
     } while (opcao != 4);
+  }
