@@ -28,6 +28,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+// teste
+
 #define Quant_Compromissos 100
 
 typedef struct {
