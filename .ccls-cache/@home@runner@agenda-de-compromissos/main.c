@@ -1,4 +1,3 @@
-#include <stdio.h>
 //  a agenda contara com um sistem simples de cadastro de compromissos e prioridades do dia
 //  a a
 //Agenda deve conter as seguintes informações.
@@ -23,35 +22,303 @@
 //  remover
 // 4- Sair
 //  sair do programa
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#define Quant_Compromissos 100
+###             Universidade Federal do Rio Grande do Norte                 ###
+###                 Centro de Ensino Superior do Seridó                     ###
+###               Departamento de Computação e Tecnologia                   ###
+###                  Disciplina DCT1106 -- Programação                      ###
+###                  Projeto Sistema de Gestão Escolar                      ###
+###             Developed by @flgorgonio -- since Mar, 2020                 ###
 
-typedef struct {
-    char nome[100];
-    char data[20];
-    char hora[10];
-    int prioridade;
-} Compromisso;
+###                                Semana 2                                 ###
 
-typedef struct {
-    Compromisso compromissos[Quant_Compromissos];
-    int quantidade;
-} Agenda;
 
-void cadastrar_compromisso(Agenda *agenda);
-void listar_compromissos(Agenda *agenda);
-void listar_por_prioridade(Agenda *agenda);
-void listar_por_data(Agenda *agenda);
-void listar_por_hora(Agenda *agenda);
-void listar_por_nome(Agenda *agenda);
-void editar_compromisso(Agenda *agenda);
-void menu_principal(Agenda *agenda);
 
-int main() {
+//
+// Assinatura das funções
+void tela_menu_principal(void);
+void tela_sobre(void);
+void tela_equipe(void);
+void tela_menu_aluno(void);
+void tela_cadastrar_aluno(void);
+void tela_pesquisar_aluno(void);
+void tela_alterar_aluno(void);
+void tela_excluir_aluno(void);
+
+//
+// Programa principal
+int main(void) {
+    tela_menu_principal();
+    tela_sobre();
+    tela_equipe();
+    tela_menu_aluno();
+    tela_cadastrar_aluno();
+    tela_pesquisar_aluno();
+    tela_alterar_aluno();
+    tela_excluir_aluno();
+    return 0;
+}
+
+
+###//
+// Funções
+
+void tela_menu_principal(void) {
+    char op;
+    system("clear||cls");
+    printf("\n");
+    printf("#########################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###             Universidade Federal do Rio Grande do Norte                 ###\n");
+    printf("###                 Centro de Ensino Superior do Seridó                     ###\n");
+    printf("###               Departamento de Computação e Tecnologia                   ###\n");
+    printf("###                  Disciplina DCT1106 -- Programação                      ###\n");
+    printf("###                  Projeto Sistema de Gestão Escolar                      ###\n");
+    printf("###             Developed by @flgorgonio -- since Mar, 2020                 ###\n");
+    printf("###                                                                         ###\n");
+    printf("#########################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###            - - - - - AGENDA DE COMPROMISSOS - - - - -             ###\n");
+    printf("###                                                                         ###\n");
+    printf("###            1. Cadastrar compromisso                                             ###\n");
+    printf("###            2. Listar compromisso                                        ###\n");
+    printf("###            3. Editar copromisso                                              ###\n");
+    printf("###            4. Prioridade do evento                                          ###\n");
+  printf("###              5. Excluir compromisso                                        ###\n");
+    printf("###            0. Sair                                                      ###\n");
+    printf("###                                                                         ###\n");
+    printf("###            Escolha a opção desejada: ");
+    scanf("%c", &op);
+    getchar();
+    printf("###                                                                         ###\n");
+    printf("#########################################################################\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+
+void tela_sobre(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("#########################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###             Universidade Federal do Rio Grande do Norte                 ###\n");
+    printf("###                 Centro de Ensino Superior do Seridó                     ###\n");
+    printf("###               Departamento de Computação e Tecnologia                   ###\n");
+    printf("###                  Disciplina DCT1106 -- Programação                      ###\n");
+    printf("###               Projeto Agenda de compromissos                          ###\n");
+    printf("###               Developed by @Geocastasouza                             ###\n");
+    printf("###                                                                         ###\n");
+    printf("#########################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###            = = = = = Sistema de Gestão Escolar = = = = =                ###\n");
+    printf("###                                                                         ###\n");
+    printf("###  Programa exemplo utilizado na disciplina DCT1106 - Programação, para   ###\n");
+    printf("###  fins didáticos de ilustração. O programa contém os principais módulos  ###\n");
+    printf("###  e funcionalidades que serão exigidos na avaliação dos projetos a serem ###\n");
+    printf("###  desenvolvidos pelos alunos ao longo da disciplina. Serve como um guia  ###\n");
+    printf("###  de consulta e referência para o desenvolvidos dos demais projetos.     ###\n");
+    printf("###                                                                         ###\n");
+    printf("#########################################################################\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+
+void tela_equipe(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("#########################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###             Universidade Federal do Rio Grande do Norte                 ###\n");
+    printf("###                 Centro de Ensino Superior do Seridó                     ###\n");
+    printf("###               Departamento de Computação e Tecnologia                   ###\n");
+    printf("###                  Disciplina DCT1106 -- Programação                      ###\n");
+    printf("###                  Agenda de Compromissos                               ###\n");
+    printf("###             Developed by @geocastasouza-- since Mar, 2023                  ###\n");
+    printf("###                                                                         ###\n");
+    printf("#########################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###                    Gestao de comprissos                           ###\n");
+    printf("###                                                                         ###\n");
+    printf("###            Este projeto exemplo foi desenvolvido por:                   ###\n");
+    printf("###             Dis.Geocasta Aves de Souza                                       ###\n");
+    printf("###            Prof. Flavius Gorgônio                                       ###\n");
+    printf("###            E-mail:geocastasouza9@gmail.com                               \n");
+    printf("###            Redes sociais: @gecasta                                     ###\n");
+    printf("###            Git: https://github.com/@geocastasouza/agenda-de-compromissos.git ###\n");
+    printf("###                                                                         ###\n");
+    printf("#########################################################################\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+} 
+
+
+void tela_menu_aluno(void) {
+    char op;
+    system("clear||cls");
+    printf("\n");
+    printf("#########################################################################\n");
+    printf("###                                                                         ###\n");
+    printf("###       -------------------------------------------------------         ###\n");
+    printf("###        ########################################################      ###\n");
+    printf("###             - - - -    Agenda de Compromissos  - - - -                       ###\n");
+    printf("###        ########################################################      ###\n");
+    printf("###       -------------------------------------------------------         ###\n");
+    printf("###               Developed by @flgorgonio -- since Mar, 2020               ###\n");
+    printf("###                                                                         ###\n");
+    printf("\n");
+    printf("###                                                                         ###\n");
+    printf("###       ########################################################          ###\n");
+    printf("###                   - - - - - -  Menu Compromisso  - - - - - -               ###\n");
+    printf("###        ########################################################          ###\n");
+    printf("###                                                                         ###\n");
+    printf("###            1. Cadastrar um novo compromisso                           ###\n");
+    printf("###            2. Pesquisar os dados de um comopromisso                           ###\n");
+    printf("###            3. Atualizar o cadastro de um compromisso                          ###\n");
+    printf("###            4. Excluir um d do sistema compromisso                               ###\n");
+    printf("###            0. Voltar ao menu anterior                                    ###\n");
+    printf("###                                                                         ###\n");
+    printf("###            Escolha a opção desejada: ");
+    scanf("%c", &op);
+    getchar();
+    printf("###                                                                         ###\n");
+    printf("###                                                                         ###\n");
+    printf("\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+
+void tela_cadastrar_aluno(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("\n");
+    printf("###                                                                         ###\n");
+    printf("###       -------------------------------------------------------         ###\n");
+    printf("###        ########################################################      ###\n");
+    printf("###            - - - - - Agenda de compromissos - - - - -                ###\n");
+    printf("###        ########################################################      ###\n");
+    printf("###       -------------------------------------------------------         ###\n");
+    printf("###               Developed by @flgorgonio -- since Mar, 2020               ###\n");
+    printf("###                                                                         ###\n");
+    printf("\n");
+    printf("###                                                                         ###\n");
+    printf("###    ########################################################          ###\n");
+    printf("###            - - - - -      Cadastrar     - - - - -                    ###\n");
+    printf("###    ########################################################          ###\n");
+    printf("###                                                                         ###\n");
+    printf("###            Compromisso (apenas números):                                  ###\n");
+    printf("###            Nome completo:                                               ###\n");
+    printf("###            Hora                                                       ###\n");
+    printf("###            Data  (dd/mm/aaaa):                                        ###\n");
+    printf("###            Celular  (apenas números):                                   ###\n");
+    printf("###                                                                         ###\n");
+    printf("###                                                                         ###\n");
+    printf("\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+
+void tela_pesquisar_aluno(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("\n");
+    printf("###                                                                         ###\n");
+    printf("***       -------------------------------------------------------         ###\n");
+    printf("########################################################################\n");
+    printf("           --------  Agenda de compromissos  ------                     \n");
+    printf("########################################################################\n");
+    printf("         -------------------------------------------------------          ###\n");
+    printf("###               Developed by @flgorgonio -- since Mar, 2020               ###\n");
+    printf("###                                                                         ###\n");
+    printf("************************************************************************\n");
+    printf("###                                                                         ###\n");
+    printf("###    ########################################################          ###\n");
+    printf("###       - - - - - - - - - listar compromissos - - - - - - - -          ###\n"); 
+    printf("###    ########################################################          ###\n");
+    printf("###                                                                         ###\n");
+    printf("###            Informe a  (apenas números):                        ###\n");
+    printf("###                                                                         ###\n");
+    printf("###                                                                         ###\n");
+    printf("######################################################################\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+
+void tela_alterar_aluno(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("\n");
+    printf("###                                                                         ###\n");
+    printf("###       -------------------------------------------------------         ###\n");
+    printf("###        ########################################################      ###\n");
+    printf("###             - - - -  Agenda de Compromissos  - - - -                  ###\n");
+    printf("###        ########################################################      ###\n");
+    printf("###       -------------------------------------------------------         ###\n");
+    printf("###               Developed by @flgorgonio -- since Mar, 2020               ###\n");
+    printf("###                                                                         ###\n");
+    printf("\n");
+    printf("###                                                                         ###\n");
+    printf("###    ########################################################          ###\n");
+    printf("###           - - - - - - - -  Alterar Evento  - - - - - - -              ###\n");
+    printf("###    ########################################################          ###\n");
+    printf("###                                                                         ###\n");
+    printf("###            Informe a matrícula (apenas números):                        ###\n");
+    printf("###                                                                         ###\n");
+    printf("###                                                                         ###\n");
+    printf("\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+
+void tela_excluir_evento(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("\n");
+    printf("###                                                                         ###\n");
+    printf("###       -------------------------------------------------------         ###\n");
+    printf("###        ########################################################      ###\n");
+    printf("###          - - - -   Escola de Idiomas Língua Solta   - - - -          ###\n");
+    printf("###        ########################################################      ###\n");
+    printf("###       -------------------------------------------------------         ###\n");
+    printf("###               Developed by @flgorgonio -- since Mar, 2020               ###\n");
+    printf("###                                                                         ###\n");
+    printf("\n");
+    printf("###                                                                         ###\n");
+    printf("###    ########################################################          ###\n");
+    printf("###            - - - - - - - - Excluir evento - - - - - - -              ###\n");
+    printf("###    ########################################################          ###\n");
+    printf("###                                                                         ###\n");
+    printf("###            Informe compromisso (apenas números):                        ###\n");
+    printf("###                                                                         ###\n");
+    printf("###                                                                         ###\n");
+    printf("\n");
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+}
+
+// teste
+
+
+
+
+
+/*int main() {
     Agenda agenda;
     agenda.quantidade = 0;
     menu_principal(&agenda);
@@ -81,38 +348,14 @@ void cadastrar_compromisso(Agenda *agenda) {
 void listar_compromissos(Agenda *agenda) {
     printf("Lista de compromissos:\n");
     for (int i = 0; i < agenda->quantidade; i++) {
-        printf("Nome: %s, Data: %s, Hora: %s, Prioridade: %d\n",
-               agenda->compromissos[i].nome,
-               agenda->compromissos[i].data,
-               agenda->compromissos[i].hora,
-               agenda->compromissos[i].prioridade);
+        printf("Nome: %s, Data: %s, Hora: %s, Prioridade: %d\n");
+               agenda->compromissos[i].nome;
+               agenda->compromissos[i].data;
+               agenda->compromissos[i].hora;
+               agenda->compromissos[i].prioridade;
     }
 }
 
-void listar_por_prioridade(Agenda *agenda) {
-    printf("Lista de compromissos por prioridade:\n");
-    for (int i = 0; i < agenda->quantidade; i++) 
-}
-void listar_por_data(Agenda *agenda) {
-    printf("Lista de compromissos por data:\n");
-    for (int i = 0; i < agenda->quantidade; i++)
-}
-void listar_por_hora(Agenda *agenda) {
-    printf("Lista de compromissos por hora:\n");
-    for (int i = 0; i < agenda->quantidade; i++)    
-}
-
-void listar_por_nome(Agenda *agenda) {
-    printf("Lista de compromissos por nome:\n"); 
-    for (int i = 0; i < agenda->quantidade; i++)     
-}
-
-void editar_compromisso(Agenda *agenda) {
-    char nome[100];
-    printf("Digite o nome do compromisso a ser editado: ");
-    scanf(" %[^\n]", nome);
-    for (int i = 0; i < agenda->quantidade;)  
-}
 
 void menu_principal(Agenda *agenda) {
     int opcao;
@@ -142,3 +385,5 @@ void menu_principal(Agenda *agenda) {
                 printf("Opção inválida. Por favor, escolha uma opção válida.\n");
         }
     } while (opcao != 4);
+  }
+*/
