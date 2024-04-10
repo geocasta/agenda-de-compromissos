@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "agenda.h"
 
 // ###             Universidade Federal do Rio Grande do Norte                ###
 // ###                 Centro de Ensino Superior do Seridó                    ###
