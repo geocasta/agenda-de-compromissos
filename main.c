@@ -25,8 +25,6 @@ int main(void) {
     tela_excluir_compromi();
     return 0;
 }
-
-
 //
 // Funções
 
