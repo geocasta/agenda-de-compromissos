@@ -25,8 +25,7 @@ int main(void) {
     tela_excluir_compromi();
     return 0;
 }
-//
-// Funções
+
 
 void tela_menu_principal(void) {
     char op;
@@ -106,7 +105,7 @@ void tela_equipe(void) {
     printf("###                                                                         ###\n");
     printf("###############################################################################\n");
     printf("###                                                                         ###\n");
-    printf("###                    Gestao de comprissos                                 ###\n");
+    printf("###                    Gestao de compromissos                               ###\n");
     printf("###                                                                         ###\n");
     printf("###            Este projeto exemplo foi desenvolvido por:                   ###\n");
     printf("###            Dis.Geocasta Aves de Souza                                   ###\n");
