@@ -5,12 +5,12 @@
 #include "agenda.h"
 #include "sobre.h"
 
-// ###             Universidade Federal do Rio Grande do Norte                ###
-// ###                 Centro de Ensino Superior do Seridó                    ###
-//###               Departamento de Computação e Tecnologia                   ###
-//###                  Disciplina DCT1106 -- Programação                      ###
-//###                  Projeto Agenda compromissos                            ###
-//###             Developed by @GEOCASTASOUZA -- since Mar, 2023              ###
+//###             Universidade Federal do Rio Grande do Norte                ###
+//###                 Centro de Ensino Superior do Seridó                    ###
+//###               Departamento de Computação e Tecnologia                  ###
+//###                  Disciplina DCT1106 -- Programação                     ###
+//###                  Projeto Agenda compromissos                           ###
+//###             Developed by @GEOCASTASOUZA -- since Mar, 2023             ###
 
 
 
