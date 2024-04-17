@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/UFRN/agenda-de-compromissos-1",
-      "program": "c:/Users/UFRN/agenda-de-compromissos-1/build/Debug/outDebug",
+      "cwd": "c:/Users/UFRN/agenda-de-compromissos",
+      "program": "c:/Users/UFRN/agenda-de-compromissos/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
