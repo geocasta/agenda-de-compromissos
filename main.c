@@ -64,7 +64,7 @@ void tela_menu_principal(void) {
 }
 
 
-void tela_sobre(void) {
+void tela_sobre_o(void) {
     system("clear||cls");
     printf("\n");
     printf("##############################################################################\n");
